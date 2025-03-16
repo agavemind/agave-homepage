@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agave Tech Homepage
+
+This is the official homepage for Agave Tech, showcasing our mission and core efforts in enhancing human capabilities through AI.
+
+## Features
+
+- Modern, responsive design
+- Smooth animations and transitions
+- Contact form
+- Optimized for performance and SEO
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone <repository-url>
+   cd agave-homepage
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Run the development server:
 
-## Learn More
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment to GitHub Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create a new repository on GitHub.
 
-## Deploy on Vercel
+2. Install the gh-pages package:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install --save-dev gh-pages
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Add the following scripts to your package.json:
+
+   ```json
+   {
+     "scripts": {
+       "build": "next build",
+       "export": "next export",
+       "deploy": "next build && touch out/.nojekyll && gh-pages -d out --dotfiles"
+     }
+   }
+   ```
+
+4. Create or update next.config.js:
+
+   ```javascript
+   /** @type {import('next').NextConfig} */
+   const nextConfig = {
+     output: "export",
+     images: {
+       unoptimized: true,
+     },
+     basePath: "/agave-homepage",
+   };
+
+   module.exports = nextConfig;
+   ```
+
+5. Deploy to GitHub Pages:
+
+   ```bash
+   npm run deploy
+   ```
+
+6. Configure GitHub Pages in your repository settings to use the gh-pages branch.
+
+## Development
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the production version
+- `npm run lint` - Run ESLint
+- `npm run deploy` - Deploy to GitHub Pages
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
