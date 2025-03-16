@@ -11,10 +11,12 @@ This is the official homepage for Agave Tech, showcasing our mission and core ef
 
 ## Tech Stack
 
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- Framer Motion
+- Next.js 14.1.0
+- TypeScript 5
+- Tailwind CSS 3.4
+- Framer Motion 11.18
+- PostCSS 8
+- ESLint
 
 ## Getting Started
 
@@ -31,65 +33,64 @@ This is the official homepage for Agave Tech, showcasing our mission and core ef
    npm install
    ```
 
-3. Run the development server:
+3. Set up environment variables:
+
+   Create a `.env` file in the root directory with the required environment variables:
+
+   ```
+   NEXT_PUBLIC_SITE_URL=http://localhost:3000
+   ```
+
+4. Run the development server:
 
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+agave-homepage/
+├── src/              # Source files
+├── public/           # Static files
+├── .next/           # Next.js build output
+├── node_modules/    # Dependencies
+├── .env            # Environment variables
+├── .gitignore      # Git ignore rules
+├── next.config.ts   # Next.js configuration
+├── postcss.config.mjs # PostCSS configuration
+├── tailwind.config.ts # Tailwind CSS configuration
+├── tsconfig.json    # TypeScript configuration
+└── package.json     # Project metadata and dependencies
+```
+
+## Development
+
+Available commands:
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the production version
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint
+- `npm run deploy` - Deploy to GitHub Pages
 
 ## Deployment to GitHub Pages
 
-1. Create a new repository on GitHub.
+1. Ensure your repository is configured for GitHub Pages deployment.
 
-2. Install the gh-pages package:
+2. The project is already set up with gh-pages package and necessary configurations.
 
-   ```bash
-   npm install --save-dev gh-pages
-   ```
-
-3. Add the following scripts to your package.json:
-
-   ```json
-   {
-     "scripts": {
-       "build": "next build",
-       "export": "next export",
-       "deploy": "next build && touch out/.nojekyll && gh-pages -d out --dotfiles"
-     }
-   }
-   ```
-
-4. Create or update next.config.js:
-
-   ```javascript
-   /** @type {import('next').NextConfig} */
-   const nextConfig = {
-     output: "export",
-     images: {
-       unoptimized: true,
-     },
-     basePath: "/agave-homepage",
-   };
-
-   module.exports = nextConfig;
-   ```
-
-5. Deploy to GitHub Pages:
+3. Deploy by running:
 
    ```bash
    npm run deploy
    ```
 
-6. Configure GitHub Pages in your repository settings to use the gh-pages branch.
+4. Configure GitHub Pages in your repository settings to use the gh-pages branch.
 
-## Development
-
-- `npm run dev` - Start the development server
-- `npm run build` - Build the production version
-- `npm run lint` - Run ESLint
-- `npm run deploy` - Deploy to GitHub Pages
+5. Your site will be available at `https://<username>.github.io/agave-homepage`
 
 ## Contributing
 
