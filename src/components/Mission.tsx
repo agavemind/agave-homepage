@@ -16,13 +16,13 @@ export default function Mission() {
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-6">
               Our Mission
             </h2>
-            <div className="prose prose-lg text-gray-600">
-              <p className="mb-6">
+            <div className="prose prose-lg">
+              <p className="mb-6 text-gray-800">
                 Agave Tech is dedicated to developing innovative products that
                 combine hardware and software, enhancing human capabilities
                 through artificial intelligence technologies.
               </p>
-              <p>
+              <p className="text-gray-800">
                 We enable people to transcend their limitations, solve complex
                 problems more efficiently, and achieve higher levels of
                 productivity and creativity.
@@ -37,8 +37,8 @@ export default function Mission() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20" />
+            <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-xl bg-white">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="p-8 text-center">
                   <div className="w-20 h-20 mx-auto mb-6 text-purple-600">
@@ -51,10 +51,10 @@ export default function Mission() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                     Innovation Through Integration
                   </h3>
-                  <p className="text-white/90">
+                  <p className="text-gray-700 text-lg">
                     Seamlessly blending cutting-edge hardware with intelligent
                     software to create transformative solutions.
                   </p>
