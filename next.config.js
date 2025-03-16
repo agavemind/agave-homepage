@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  basePath: "",
+  assetPrefix: "",
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === "production" ? "/agave-homepage" : "",
 };
 
 module.exports = nextConfig;
