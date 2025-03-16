@@ -37,12 +37,17 @@ export default function Mission() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-xl bg-white">
+            <div className="relative h-auto min-h-[400px] rounded-2xl overflow-hidden shadow-xl bg-white">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="p-8 text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 text-purple-600">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="p-4 sm:p-8 text-center">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 text-purple-600">
+                    <svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="w-full h-full"
+                    >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -51,10 +56,10 @@ export default function Mission() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-4">
                     Innovation Through Integration
                   </h3>
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-gray-700 text-base sm:text-lg px-2 sm:px-0">
                     Seamlessly blending cutting-edge hardware with intelligent
                     software to create transformative solutions.
                   </p>
